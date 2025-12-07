@@ -2279,3 +2279,112 @@ body.dark-mode .project-divider {
 ✅ Skills & Tags - Technology highlights
 Replace the asset paths with your actual project photos!
 
+## Step 8 – Using Git and GitHub Pages to publish the website
+
+**My prompt**
+How can I upload my existing Visual Studio Code project to GitHub using Git Bash and then publish it as a live website with GitHub Pages?
+
+**AI response**
+I'll help you upload your portfolio project to GitHub and publish it as a live website using GitHub Pages.
+
+Step 1: Initialize Git in your project
+
+Open Git Bash in your project folder and run:
+cd c:\Users\musay\OneDrive\Рабочий стол\site-portfolio
+git init
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+
+Step 2: Create a .gitignore file
+
+Create a .gitignore file in your project root to exclude unnecessary files:
+
+node_modules/
+.DS_Store
+.vscode/settings.json
+*.log
+.env
+dist/
+
+Step 3: Stage and commit your files
+git add .
+git commit -m "Initial commit: Portfolio website with HTML, CSS, and JavaScript"
+
+Step 4: Create a GitHub repository
+Go to https://github.com/new
+Create a new repository named site-portfolio (or your preferred name)
+Do NOT initialize with README, .gitignore, or license (you already have these)
+Click "Create repository"
+
+Step 5: Add the remote repository and push code
+
+Copy the repository URL from GitHub and run:
+git remote add origin https://github.com/YOUR-USERNAME/site-portfolio.git
+git branch -M main
+git push -u origin main
+
+
+Replace YOUR-USERNAME with your actual GitHub username.
+
+Step 6: Enable GitHub Pages
+
+Go to your GitHub repository
+Click Settings (top right)
+Scroll down to Pages section (left sidebar)
+Under "Build and deployment":
+Set Source to "Deploy from a branch"
+Set Branch to "main" and folder to "/ (root)"
+Click Save
+Your site will be published at: https://YOUR-USERNAME.github.io/site-portfolio
+
+Step 7: Verify your live website
+
+Wait 1-2 minutes, then visit your GitHub Pages URL. You should see your portfolio website live!
+
+Update your portfolio links to GitHub
+
+Update the GitHub links in your index.html, about.html, projects.html, and extra.html:
+
+// ...existing code... -->
+<footer class="footer">
+    <div class="container footer-content">
+        <p>&copy; 2025 Yusif Musayev. All rights reserved.</p>
+        <p>Website repository: 
+            <a href="https://github.com/YOUR-USERNAME/site-portfolio" target="_blank">GitHub Repo</a>
+        </p>
+    </div>
+</footer>
+<!-- ...existing code... -->
+
+Useful Git commands for future updates:
+# Check status of your files
+git status
+
+# See your commit history
+git log
+
+# Make changes and push to GitHub
+git add .
+git commit -m "Update: Add new project description"
+git push origin main
+
+# Pull latest changes (if working on multiple devices)
+git pull origin main
+
+# View remote repository info
+git remote -v
+
+Troubleshooting:
+
+If you get an error about authentication:
+
+Use GitHub's Personal Access Token instead of password
+Or configure SSH keys for easier authentication
+Check your website:
+
+After pushing to GitHub:
+
+Wait 2-3 minutes for GitHub Pages to build
+Visit https://YOUR-USERNAME.github.io/site-portfolio
+If pages don't appear, check the Actions tab in GitHub to see if there were any build errors
+Your portfolio is now live online! You can share the link with anyone, and it will be automatically updated whenever you push new commits to GitHub.
