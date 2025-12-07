@@ -1,0 +1,226 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+.navbar {
+  background-color: #0f141a;
+  padding: 1rem 0;
+  border-bottom: 1px solid #1f2933;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.7rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00aaff;
+}
+
+#nav-menu a {
+  color: #cccccc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+#nav-menu a:hover,
+#nav-menu .active {
+  color: #00aaff;
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 3rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #00aaff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cdd9e5;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 1rem;
+  transition: 0.3s;
+}
+
+.primary {
+  background-color: #0099ff;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #007acc;
+}
+
+.secondary {
+  border: 2px solid #0099ff;
+  color: #0099ff;
+}
+
+.secondary:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
+/* SOCIAL ICONS */
+.social-links i {
+  font-size: 1.5rem;
+  color: #00aaff;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-links i:hover {
+  color: #66cfff;
+}
+
+/* PROFILE IMAGE */
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid #0099ff;
+  object-fit: cover;
+}
+
+/* ============================
+   ABOUT PAGE
+============================ */
+.about-page h1,
+.project-page h1,
+.extra-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00aaff;
+}
+
+.about-page p,
+.project-page p,
+.extra-page p {
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+/* ============================
+   PROJECT LIST
+============================ */
+.project-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+  background-color: #0f141a;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid #1f2933;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* ============================
+   MOBILE NAV MENU (BURGER)
+============================ */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+}
+
+/* Mobile menu behavior */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0f141a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  #nav-menu.show {
+    display: flex;   /* вот это показывает меню */
+  }
+
+  .burger {
+    display: flex;   /* показывает кнопку */
+  }
+}
